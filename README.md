@@ -9,10 +9,11 @@ This is a Spring Boot project for a simple bank API. It allows users to register
 
 ## Prerequisites
 
-- Java 11 or higher
+- Java 17 or higher
 - Docker
 - Docker Compose
 - Maven
+- MySQL
 
 ## Getting Started
 
@@ -135,6 +136,8 @@ This project uses Docker and Docker Compose for containerization. The Docker set
 
 - Java 17
 - Spring Boot
+- MySQL
+- Hibernate
 - Docker
 - Docker Compose
 - Maven
