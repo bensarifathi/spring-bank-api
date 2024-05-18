@@ -1,9 +1,12 @@
 package com.techwithfathi.bankapi.dto.user;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class TransferMoneyRequestDto {
     private String username;
     private String password;
-    private String To;
+    @JsonProperty("To")
+    private String to;
     private int amount;
 
     public TransferMoneyRequestDto() {
@@ -12,7 +15,7 @@ public class TransferMoneyRequestDto {
     public TransferMoneyRequestDto(String username, String password, String to, int amount) {
         this.username = username;
         this.password = password;
-        this.To = to;
+        this.to = to;
         this.amount = amount;
     }
 
@@ -33,11 +36,11 @@ public class TransferMoneyRequestDto {
     }
 
     public String getTo() {
-        return To;
+        return to;
     }
 
     public void setTo(String to) {
-        this.To = to;
+        this.to = to;
     }
 
     public int getAmount() {
@@ -46,5 +49,15 @@ public class TransferMoneyRequestDto {
 
     public void setAmount(int amount) {
         this.amount = amount;
+    }
+
+    @Override
+    public String toString() {
+        return "TransferMoneyRequestDto{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", To='" + to + '\'' +
+                ", amount=" + amount +
+                '}';
     }
 }
