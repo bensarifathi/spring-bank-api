@@ -3,7 +3,7 @@ package com.techwithfathi.bankapi.dto.user;
 public class TransferMoneyRequestDto {
     private String username;
     private String password;
-    private String to;
+    private String To;
     private int amount;
 
     public TransferMoneyRequestDto() {
@@ -12,7 +12,7 @@ public class TransferMoneyRequestDto {
     public TransferMoneyRequestDto(String username, String password, String to, int amount) {
         this.username = username;
         this.password = password;
-        this.to = to;
+        this.To = to;
         this.amount = amount;
     }
 
@@ -33,11 +33,11 @@ public class TransferMoneyRequestDto {
     }
 
     public String getTo() {
-        return to;
+        return To;
     }
 
     public void setTo(String to) {
-        this.to = to;
+        this.To = to;
     }
 
     public int getAmount() {
