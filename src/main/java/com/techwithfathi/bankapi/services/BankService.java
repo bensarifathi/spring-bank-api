@@ -44,8 +44,7 @@ public class BankService {
     public String transferMoney(TransferMoneyRequestDto transferMoneyRequestDto) {
         List<User> users = userRepository.findByUsernameIn(List.of(
                 transferMoneyRequestDto.getUsername(),
-                transferMoneyRequestDto.getTo(),
-                "BANK"
+                transferMoneyRequestDto.getTo()
         ));
         if (users.size() != 2)
             throw new ApiException("Bad request");
